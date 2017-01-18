@@ -104,8 +104,8 @@ var
   Level, Distance: Integer;
   Sibling: TNode<NodeInformation>;
 begin
-  TreeDistance := 5;
-  NodeSize := 1;
+  TreeDistance := 10;
+  NodeSize := 10;
 
   MinDistance := TreeDistance + NodeSize;
   ShiftValue := 0;
@@ -129,6 +129,7 @@ begin
     GetRightContour(Sibling, 0, SiblingContour);
 
     for Level := Tree.Level + 1 to Min(MaxKey(SiblingContour), MaxKey(NodeContour)) do begin
+      Showmessage('xx');
       Distance := Floor(NodeContour[Level] - SiblingContour[Level]);
       if (Distance + ShiftValue < MinDistance) then begin
         ShiftValue := MinDistance - Distance;
@@ -293,14 +294,14 @@ begin
   DataC.Name := 'Child B';
   DataC.LocalX := 0;
   TreeB := TreeA.Add(DataC);
-//
-//  DataD.Name := 'Child C';
-//  DataD.LocalX := 0;
-//  TreeB.Add(DataD);
-//
-//  DataE.Name := 'Child D';
-//  DataE.LocalX := 0;
-//  TreeB.Add(DataE);
+
+  DataD.Name := 'Child C';
+  DataD.LocalX := 0;
+  TreeB.Add(DataD);
+
+  DataE.Name := 'Child D';
+  DataE.LocalX := 0;
+  TreeB.Add(DataE);
 
   CalculateInitialX(TreeA);
   CalculateFinalX(TreeA, 0);

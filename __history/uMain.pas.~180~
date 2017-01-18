@@ -241,7 +241,7 @@ begin
   end;
 
   if (Tree.Count > 0) and (Tree.Index <> 0) then begin
-    CheckForConflicts(Tree);
+    //CheckForConflicts(Tree);
   end;
 end;
 

@@ -293,14 +293,14 @@ begin
   DataC.Name := 'Child B';
   DataC.LocalX := 0;
   TreeB := TreeA.Add(DataC);
-//
-//  DataD.Name := 'Child C';
-//  DataD.LocalX := 0;
-//  TreeB.Add(DataD);
-//
-//  DataE.Name := 'Child D';
-//  DataE.LocalX := 0;
-//  TreeB.Add(DataE);
+
+  DataD.Name := 'Child C';
+  DataD.LocalX := 0;
+  TreeB.Add(DataD);
+
+  DataE.Name := 'Child D';
+  DataE.LocalX := 0;
+  TreeB.Add(DataE);
 
   CalculateInitialX(TreeA);
   CalculateFinalX(TreeA, 0);
